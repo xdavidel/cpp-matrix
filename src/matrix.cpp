@@ -1,4 +1,4 @@
-#include "../headers/matrix.h"
+#include "../include/matrix.h"
 
 Matrix::Matrix(unsigned int size) : Matrix(size, size) {}
 
@@ -157,7 +157,7 @@ double Matrix::Determinant() const {
 				}
 				subi++;
 			}
-			det = det + (pow(-1, x) * this->GetAt(0, x) * submatrix.Determinant());
+			det = det + (std::pow(-1, x) * this->GetAt(0, x) * submatrix.Determinant());
 		}
 		
 		return det;

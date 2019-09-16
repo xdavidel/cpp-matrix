@@ -1,5 +1,10 @@
-#include <iostream>
-#include <matrix.h>
+#include "../include/main.h"
+
+void pause() {
+	std::cout<<"\nPress any key to continue . . .";
+	std::cin.ignore();
+	std::cin.get();
+}
 
 void mult() {
 	std::cout << "Matrix Multiplication\n";
@@ -111,7 +116,7 @@ int main() {
 Select: )";
 
 		std::cin >> op;
-		system("cls");
+		system("cls||clear");
 
 		switch (op) {
 		case 0:
@@ -132,8 +137,8 @@ Select: )";
 			break;
 		}
 		
-		system("pause");
-		system("cls");
+		pause();
+		system("cls||clear");
 	} while (op != 0);
 
 	return 0;
